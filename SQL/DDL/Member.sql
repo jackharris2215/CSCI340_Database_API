@@ -1,0 +1,13 @@
+CREATE TABLE jh203518.MEMBER(
+    Id INT PRIMARY KEY,
+    FirstName VARCHAR(20) NOT NULL,
+    LastName VARCHAR(20),
+    RegisteredDate DATE CHECK (RegisteredDate <= CAST(GETDATE() AS DATE)
+);
+
+GO
+
+-- add set default
+ALTER TABLE jh203518.MEMBER
+ADD CONSTRAINT REGISTERED_DATE
+DEFAULT GETDATE() FOR RegisteredDate;

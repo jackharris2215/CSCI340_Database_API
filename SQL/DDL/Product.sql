@@ -1,0 +1,11 @@
+CREATE TABLE jh203518.PRODUCT
+(
+	Id INT PRIMARY KEY,
+	Name VARCHAR(100) NOT NULL
+	Supply INT NOT NULL,
+    Cost FLOAT,
+    Volume INT,
+    Material VARCHAR(100),
+    Rating INT,
+    [Size] VARCHAR(100)
+);
